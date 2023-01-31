@@ -9,7 +9,10 @@ const menuSlice = createSlice({
   initialState: initialMenu,
   reducers: {
     replaceMenu(state, action) {
-      state.categories = action.payload.categories;
+      return {
+        ...state,
+        categories: action.payload.categories,
+      };
     },
   },
 });
